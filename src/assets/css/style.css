@@ -1,0 +1,11 @@
+* {
+   font-family:  Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #EBEEF2  !important;
+}
