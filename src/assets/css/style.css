@@ -9,3 +9,7 @@ html, body {
 body {
     background-color: #EBEEF2  !important;
 }
+
+a{
+    text-decoration: none !important;
+}

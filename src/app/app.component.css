@@ -1,5 +1,10 @@
+/* =============== */
+/* TITLE STYLE */
+/* =============== */
+
 h1 {
     font-weight: bold;
+    font-size: xx-large;
     color: #444444;
 }
 
@@ -13,13 +18,72 @@ h1::after {
     background-color: #8024F3;
     display: block;
 }
+/* =============== */
+/* NAVIGATION BUTTONS */
+/* =============== */
 
 #navigation button {
-    border: 1px solid #8024F3;
+    border-color: #8024F3;
     background-color: white;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 16px;
-    padding: 8px 8px;
 }
 
 
+footer
+{
+    background-color: #595E64;
+}
+
+footer .container .navbar-nav .nav-link, footer {
+    color: white;
+}
+
+footer .container .navbar-nav .nav-link:hover{
+    color: #d2d2d2;
+}
+
+footer button.number{
+    background-color: #8024F3;
+    color: white;
+}
+
+footer button.whatsapp{
+    padding: 0;
+}
+
+footer a.social-media {
+    background-color: #8024F3;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* =============== */
+/* MEDIA QUERIES */
+/* =============== */
+
+@media (max-width: 576px) { 
+    h1::after{
+        display: none;
+    }
+
+    #contact{
+        flex-direction: row !important;
+    }
+
+    footer .row{
+        width: 75%;
+        margin: auto;
+        flex-direction: column-reverse;
+    }
+
+ }
+
+ @media (min-width: 768px) { 
+    #contact{
+        flex-direction: row !important;
+    }
+  }

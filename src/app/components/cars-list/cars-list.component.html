@@ -1,39 +1,90 @@
-<div class="row mt-4">
-    <div class="col-6">
-        <p id="total-encontrados"><span>106.553</span> encontrados</p>
+<!-- LIST HEADER -->
+<div class="row mt-1 mt-sm-4">
+    <!-- TOTAL ENCONTRADOS -->
+    <div class="col-sm-6">
+        <p id="total-encontrados"><span>{{ total }}</span> encontrados</p>
     </div>
+    <!-- FIM TOTAL ENCONTRADOS -->
 
-    <div id="filters" class="col-6 d-flex justify-content-end gap-2">
-        <button>
-            <img style="transform: rotate(90deg);" width="18" src="../../../assets/imgs/more-relevant-icon.svg" alt="">
-            <span style="word-wrap: none;">Mais relevantes</span> 
+    <!-- BOTÕES DE FILTRO -->
+    <div id="filters" class="col-sm-6 d-flex flex-row-reverse flex-sm-row justify-content-sm-end gap-2">
+        <button mat-raised-button>
+            <mat-icon aria-hidden="false" aria-label="more relevant icon" fontIcon="swap_vert"></mat-icon>
+
+            <span style="word-wrap: none;">Mais relevantes</span>
         </button>
-        <button>
-            <img width="18" src="../../../assets/imgs/categories-icon.svg" alt="">
+        <button mat-raised-button style="min-width: 40px;">
+            <mat-icon class="material-symbols-outlined filled" aria-hidden="false" aria-label="categories icon"
+                fontIcon="grid_view"></mat-icon>
         </button>
-        <button>
-            <img width="18" src="../../../assets/imgs/list-icon.svg" alt="">
+        <button class="d-none d-sm-block" mat-raised-button style="min-width: 40px;">
+            <mat-icon aria-hidden="false" aria-label="list icon" fontIcon="format_list_bulleted"></mat-icon>
         </button>
+    </div>
+    <!-- FIM BOTÕES DE FILTRO -->
+</div>
+<!-- FIM LISTA HEADER -->
+
+<!-- ITENS -->
+<div id="cars-list" class="d-flex gap-4 mt-5 justify-content-center">
+    <div *ngFor="let car of carsList" [ngClass]="{'visible':car.visible}" class="item">
+        <!-- ITEM -->
+        <a href="#">
+            <div class="card">
+                <img src="./assets/imgs/carro.png" class="card-img-top" alt="foto_carro">
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.marca_titulo }} {{ car.modelo_titulo }} </h5>
+                    <p class="card-text">{{ car.int_versao }}</p>
+
+                    <div class="features d-flex justify-content-between">
+                        <div>
+                            <mat-icon style="transform: translateY(25%);" aria-hidden="false"
+                                aria-label="ano fabricacao icon" fontIcon="date_range"></mat-icon>
+                            {{ car.int_anomodelofabricacao }}
+                        </div>
+                        <div>
+                            <mat-icon style="transform: translateY(25%);" aria-hidden="false"
+                                aria-label="quilometragem icon" fontIcon="speed"></mat-icon>
+                            {{ car.int_quilometragem }}
+                        </div>
+                        <div style="line-height: 3;">
+                            <img width="20" src="./assets/imgs/gear-stick.png" alt="cambio">
+                            {{ car.cambio }}
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <!-- ITEM PREÇO -->
+                        <div class="price mt-3">
+                            <span>R${{ car.int_preco_cliente }}</span>
+                        </div>
+                        <!-- FIM ITEM PREÇO -->
+
+                        <!-- ITEM FAVORITO -->
+                        <div class="favorite">
+                            <mat-icon class="material-symbols-outlined"
+                                style="color: #8024F3; transform: translateY(50%);" aria-hidden="false"
+                                aria-label="favorito icon" fontIcon="favorite"></mat-icon>
+                        </div>
+                        <!-- FIM ITEM FAVORITO -->
+                    </div>
+
+                </div>
+            </div>
+        </a>
+        <!-- FIM ITEM -->
     </div>
 </div>
+<!-- FIM ITENS -->
 
-<div id="cars-list" class="d-flex  gap-4 mt-5">
-    <div class="item">
+<!-- ITEM RODAPÉ -->
+<div id="footer" class="text-center mt-5">
 
-    </div>
-    <div class="item">
-
-    </div>
-    <div class="item">
-
-    </div>
-    <div class="item">
-
-    </div>
-    <div class="item">
-
-    </div>
-    <div class="item">
-
-    </div>
+    <p>Você já viu {{ seen }} de {{ not_seen }} veículos.</p>
+    <!-- CARREGAR MAIS -->
+    <button>
+        Carregar Mais
+        <mat-icon style="line-height: 1.48;" aria-hidden="false" aria-label="expand more icon"
+            fontIcon="expand_more"></mat-icon>
+    </button>
 </div>
+<!-- FIM RODAPÉ -->
