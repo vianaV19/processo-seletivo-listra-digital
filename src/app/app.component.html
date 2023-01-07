@@ -1,12 +1,20 @@
-<listra-topnav></listra-topnav>
+<!-- START NAV -->
+<nav class="navbar">
+  <div class="container">
+      <div class="navbar-brand mx-auto">
+          <img width="120" src="./assets/imgs/logo.png" alt="Logo">
+      </div>
+  </div>
+</nav>
+<!-- FIM NAV -->
 
-
-
+<!-- MAIN START -->
 <main>
   <div class="container p-4">
     <div class="row my-4">
       <div class="col">
         <div id="navigation" class="d-flex gap-2 ">
+          <!-- NAVIGATION -->
           <button mat-stroked-button>Home</button>
           <button mat-stroked-button>Veículos</button>
         </div>
@@ -14,21 +22,23 @@
     </div>
     <div class="row mt-2">
       <div class="col">
+        <!-- TITLE -->
         <h1>Veículos encontrados</h1>
       </div>
     </div>
 
-
-    <listra-cars-list>
-
-    </listra-cars-list>
+    <!-- LISTA DOS CARROS -->
+    <listra-cars-list></listra-cars-list>
 
   </div>
 </main>
+<!-- MAIN END -->
 
+<!-- FOOTER START -->
 <footer class="p-5">
   <div class="container">
     <div class="row text-md-start text-center">
+      <!-- ENCONTRE O SEU VEICULO -->
       <div class="col-md-2 d-none d-sm-block">
         <h3 class="fw-bold fs-6">Encontre o seu Veículo</h3>
         <ul class="navbar-nav">
@@ -46,6 +56,9 @@
           </li>
         </ul>
       </div>
+      <!-- FIM ENCONTRE O SEU VEICULO -->
+
+      <!-- A EMPRESA -->
       <div class="col-md-2 d-none d-sm-block">
         <h3 class="fw-bold fs-6">A Empresa</h3>
         <ul class="navbar-nav">
@@ -63,6 +76,9 @@
           </li>
         </ul>
       </div>
+      <!-- FIM A EMPRESA -->
+
+      <!-- ATENDIMENTO -->
       <div class="col-md-2 d-none d-sm-block">
         <h3 class="fw-bold fs-6">Atendimento</h3>
         <ul class="navbar-nav">
@@ -77,6 +93,9 @@
           </li>
         </ul>
       </div>
+      <!-- FIM ATENDIMENTO -->
+
+      <!-- LOJISTAS -->
       <div class="col-md-2 d-none d-sm-block">
         <h3 class="fw-bold fs-6">Lojistas</h3>
         <ul class="navbar-nav">
@@ -85,6 +104,9 @@
           </li>
         </ul>
       </div>
+      <!-- FIM LOJISTAS -->
+
+      <!-- ATENDIMENTO AO CLIENTE -->
       <div class="col-md-2 mt-3">
         <h3 style="font-size: 14px;" >Atendimento ao Cliente</h3>
         <div id="contact" class="d-flex gap-3 justify-content-md-start justify-content-center">
@@ -94,6 +116,9 @@
           </button>
         </div>
       </div>
+      <!-- FIM ATENDIMENTO AO CLIENTE -->
+
+      <!-- SIGA A GENTE -->
       <div class="col-md-2 mt-3 text-md-center">
         <h3 class="fw-bold fs-6">Siga a gente</h3>
         <div class="d-flex gap-2 justify-content-md-start justify-content-center">
@@ -111,6 +136,8 @@
           </a>
         </div>
       </div>
+      <!-- FIM SIGA A GENTE -->
     </div>
   </div>
 </footer>
+<!-- FOOTER END -->
