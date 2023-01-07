@@ -62,12 +62,25 @@
     font-size: 0.75rem;
 }
 
-
+#cars-list .cidade{
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    background-color: white;
+    color: #59595A;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    border-top-right-radius: 25px ;
+    border-bottom-right-radius: 25px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 #cars-list .item {
-    flex: 0 0 255px;
+    flex: 0 0 265px;
     display: none;
-
 }
 
 /* DEFINE OS ITENS VISIVEIS */

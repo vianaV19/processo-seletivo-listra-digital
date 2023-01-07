@@ -26,7 +26,7 @@
 <!-- FIM LISTA HEADER -->
 
 <!-- ITENS -->
-<div id="cars-list" class="d-flex gap-4 mt-5 justify-content-center">
+<div id="cars-list" class="d-flex gap-3 mt-5 justify-content-center">
     <div *ngFor="let car of carsList" [ngClass]="{'visible':car.visible}" class="item">
         <!-- ITEM -->
         <a href="#">
@@ -35,8 +35,14 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ car.marca_titulo }} {{ car.modelo_titulo }} </h5>
                     <p class="card-text">{{ car.int_versao }}</p>
+                    
+                    <div class="cidade">
+                        <mat-icon style="color:#8024F3 " aria-hidden="false"
+                                aria-label="cidade icon" fontIcon="location_on"></mat-icon>
+                        {{ car.loja_cidade }}
+                    </div>
 
-                    <div class="features d-flex justify-content-between">
+                    <div class="features d-flex justify-content-between gap-1">
                         <div>
                             <mat-icon style="transform: translateY(25%);" aria-hidden="false"
                                 aria-label="ano fabricacao icon" fontIcon="date_range"></mat-icon>
@@ -45,7 +51,7 @@
                         <div>
                             <mat-icon style="transform: translateY(25%);" aria-hidden="false"
                                 aria-label="quilometragem icon" fontIcon="speed"></mat-icon>
-                            {{ car.int_quilometragem }}
+                            {{ car.int_quilometragem }} Km
                         </div>
                         <div style="line-height: 3;">
                             <img width="20" src="./assets/imgs/gear-stick.png" alt="cambio">
@@ -55,7 +61,7 @@
                     <div class="d-flex justify-content-between">
                         <!-- ITEM PREÇO -->
                         <div class="price mt-3">
-                            <span>R${{ car.int_preco_cliente }}</span>
+                            <span>R$ {{ car.int_preco_cliente }}</span>
                         </div>
                         <!-- FIM ITEM PREÇO -->
 
